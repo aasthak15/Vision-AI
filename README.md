@@ -44,9 +44,8 @@ pipeline.
 
 The following diagram illustrates the overall architecture and interaction flow of the Vision AI system.
 
-<p align="center">
-  <img src="architecture.png" alt="Vision AI System Architecture" width="100%">
-</p>
+<img width="1556" height="605" alt="archi" src="https://github.com/user-attachments/assets/9f2de69a-1a3b-499b-8c64-27e488de9e5d" />
+
 
 ---
 
