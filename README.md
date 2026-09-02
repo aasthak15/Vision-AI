@@ -40,6 +40,16 @@ pipeline.
 
 ---
 
+## 🏗️ Architecture
+
+The following diagram illustrates the overall architecture and interaction flow of the Vision AI system.
+
+<p align="center">
+  <img src="architecture.png" alt="Vision AI System Architecture" width="100%">
+</p>
+
+---
+
 # 🎯 Objectives
 
 The primary objectives of Vision AI are:
