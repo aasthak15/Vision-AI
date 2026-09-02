@@ -5,9 +5,12 @@ from gtts import gTTS
 from time import sleep
 from pathlib import Path
 from google import genai
+from dotenv import load_dotenv
 from PIL import Image
 from deepface import DeepFace
 import cv2
+
+load_dotenv()
 
 def record_audio():
     r = sr.Recognizer()
@@ -103,13 +106,12 @@ def text_to_speech(text):
 
 def call_api_with_gemini(prompt):
     try:
-        # Connect to Gemini
-        client = genai.Client(api_key="AQ.Ab8RN6I4PnLoF1Kw3XB5pv_Qb4czOjB_WXAE8XzXosG1St_9Uw")
+        client = genai.Client(
+            api_key=os.getenv("GEMINI_API_KEY")
+        )
 
-        # Read the compressed image
         image_data = Path("compressed_image.png").read_bytes()
 
-        # Send prompt + image to Gemini
         response = client.models.generate_content(
             model="gemini-3.6-flash",
             contents=[
@@ -123,13 +125,11 @@ def call_api_with_gemini(prompt):
             ]
         )
 
-        # Get Gemini's response
         answer = response.text
 
         print("\n🤖 Gemini:")
         print(answer)
 
-        # Speak the response
         text_to_speech(answer)
 
         return answer
