@@ -1,9 +1,0 @@
-__pycache__/
-*.pyc
-.env
-captured_image.png
-compressed_image.png
-output.mp3
-.deepface/
-venv/
-.venv/
